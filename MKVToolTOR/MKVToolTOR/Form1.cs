@@ -22,7 +22,7 @@ namespace MKVToolTOR
         string query = " -o \"{1}\"  --audio-tracks th  -S   \"{0}\"";
         List<string> lstMKV;
         int index = 0;
-        string mkvmerge_file = @"E:\T_MEGA\Pro\MKVToolNix\mkvmerge.exe";
+        string mkvmerge_file = @"D:\Mega_TOR\Pro\MKVToolNix\mkvmerge.exe";
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -106,6 +106,7 @@ namespace MKVToolTOR
         public void ConvertMKVItem(string file)
         {
             string _file = Path.GetDirectoryName(file) + "\\" + Path.GetFileName(file).Replace(".mkv", "_.mkv");
+            this.Invoke(new Action(() => this.Text = "MKV FILE:" + file));
              Process process = new Process
              {
                  StartInfo =

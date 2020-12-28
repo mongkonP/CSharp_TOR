@@ -58,5 +58,17 @@ namespace MKVToolTOR.Properties {
                 this["strReplace"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string strDisplay {
+            get {
+                return ((string)(this["strDisplay"]));
+            }
+            set {
+                this["strDisplay"] = value;
+            }
+        }
     }
 }

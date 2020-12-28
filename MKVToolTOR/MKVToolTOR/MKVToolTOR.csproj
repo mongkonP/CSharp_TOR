@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,8 +47,16 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xabe.FFmpeg, Version=4.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xabe.FFmpeg.4.4.0\lib\netstandard2.0\Xabe.FFmpeg.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassTOR\DataGridViewProgressCell.cs" />
+    <Compile Include="ClassTOR\DataGridViewProgressColumn.cs" />
+    <Compile Include="ClassTOR\ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +64,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassTOR\NativeMethods.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClassTOR\UnsafeNativeMethods.cs" />
@@ -61,6 +78,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,6 +91,67 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="MKVToolNix\examples\example-cue-sheet-1.cue" />
+    <None Include="MKVToolNix\examples\matroskachapters.dtd" />
+    <None Include="MKVToolNix\examples\matroskasegmentinfo.dtd" />
+    <None Include="MKVToolNix\examples\matroskatags.dtd" />
+    <None Include="MKVToolNix\locale\bg\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\ca\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\cs\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\de\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\es\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\eu\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\fr\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\it\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\ja\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\ko\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\libqt\qt_ar.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_bg.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_ca.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_cs.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_da.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_de.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_en.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_es.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_eu.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_fa.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_fi.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_fr.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_gd.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_gl.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_he.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_hu.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_it.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_ja.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_ko.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_lt.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_lv.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_pl.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_pt.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_ru.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_sk.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_sl.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_sv.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_uk.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_zh_CN.qm" />
+    <None Include="MKVToolNix\locale\libqt\qt_zh_TW.qm" />
+    <None Include="MKVToolNix\locale\lt\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\nl\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\pl\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\pt\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\pt_BR\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\ro\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\ru\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\sr_RS%40latin\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\sr_RS\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\sv\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\tr\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\uk\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\zh_CN\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\locale\zh_TW\LC_MESSAGES\mkvtoolnix.mo" />
+    <None Include="MKVToolNix\MKVToolNix.url" />
+    <None Include="MKVToolNix\share\misc\magic.mgc" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -83,6 +164,137 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ffmpeg\avcodec-57.dll" />
+    <Content Include="ffmpeg\avdevice-57.dll" />
+    <Content Include="ffmpeg\avfilter-6.dll" />
+    <Content Include="ffmpeg\avformat-57.dll" />
+    <Content Include="ffmpeg\avutil-55.dll" />
+    <Content Include="ffmpeg\ffmpeg.exe" />
+    <Content Include="ffmpeg\ffplay.exe" />
+    <Content Include="ffmpeg\ffprobe.exe" />
+    <Content Include="ffmpeg\postproc-54.dll" />
+    <Content Include="ffmpeg\swresample-2.dll" />
+    <Content Include="ffmpeg\swscale-4.dll" />
+    <Content Include="MKVToolNix\data\sounds\finished-1.ogg" />
+    <Content Include="MKVToolNix\data\sounds\finished-2.ogg" />
+    <Content Include="MKVToolNix\data\sounds\finished-3.ogg" />
+    <Content Include="MKVToolNix\doc\bg\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\bg\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\bg\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\bg\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\bg\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\bg\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\ca\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\ca\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\ca\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\ca\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\ca\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\ca\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\command_line_references.html" />
+    <Content Include="MKVToolNix\doc\COPYING.txt" />
+    <Content Include="MKVToolNix\doc\de\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\de\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\de\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\de\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\de\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\de\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\en\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\en\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\en\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\en\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\en\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\en\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\es\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\es\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\es\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\es\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\es\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\es\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\fr\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\fr\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\fr\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\fr\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\fr\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\fr\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\it\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\it\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\it\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\it\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\it\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\it\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\ja\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\ja\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\ja\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\ja\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\ja\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\ja\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\ko\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\ko\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\ko\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\ko\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\ko\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\ko\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\licenses\Boost-1.0.txt" />
+    <Content Include="MKVToolNix\doc\licenses\CC-BY-3.0.txt" />
+    <Content Include="MKVToolNix\doc\licenses\jpcre2-BSD.txt" />
+    <Content Include="MKVToolNix\doc\licenses\LGPL-2.1.txt" />
+    <Content Include="MKVToolNix\doc\licenses\LGPL-3.0.txt" />
+    <Content Include="MKVToolNix\doc\licenses\nlohmann-json-MIT.txt" />
+    <Content Include="MKVToolNix\doc\licenses\pugixml-MIT.txt" />
+    <Content Include="MKVToolNix\doc\licenses\QtWaitingSpinner-MIT.txt" />
+    <Content Include="MKVToolNix\doc\licenses\utf8-cpp-custom.txt" />
+    <Content Include="MKVToolNix\doc\NEWS.txt" />
+    <Content Include="MKVToolNix\doc\nl\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\nl\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\nl\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\nl\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\nl\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\nl\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\pl\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\pl\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\pl\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\pl\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\pl\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\pl\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\README.txt" />
+    <Content Include="MKVToolNix\doc\ru\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\ru\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\ru\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\ru\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\ru\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\ru\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\uk\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\uk\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\uk\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\uk\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\uk\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\uk\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\zh_CN\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\zh_CN\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\zh_CN\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\zh_CN\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\zh_CN\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\zh_CN\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\doc\zh_TW\mkvextract.html" />
+    <Content Include="MKVToolNix\doc\zh_TW\mkvinfo.html" />
+    <Content Include="MKVToolNix\doc\zh_TW\mkvmerge.html" />
+    <Content Include="MKVToolNix\doc\zh_TW\mkvpropedit.html" />
+    <Content Include="MKVToolNix\doc\zh_TW\mkvtoolnix-doc.css" />
+    <Content Include="MKVToolNix\doc\zh_TW\mkvtoolnix-gui.html" />
+    <Content Include="MKVToolNix\examples\example-chapters-1.xml" />
+    <Content Include="MKVToolNix\examples\example-chapters-2.xml" />
+    <Content Include="MKVToolNix\examples\example-segmentinfo-1.xml" />
+    <Content Include="MKVToolNix\examples\example-tags-2.xml" />
+    <Content Include="MKVToolNix\examples\example-timestamps-v1.txt" />
+    <Content Include="MKVToolNix\examples\example-timestamps-v2.txt" />
+    <Content Include="MKVToolNix\mkvextract.exe" />
+    <Content Include="MKVToolNix\mkvinfo.exe" />
+    <Content Include="MKVToolNix\mkvmerge.exe" />
+    <Content Include="MKVToolNix\mkvpropedit.exe" />
+    <Content Include="MKVToolNix\mkvtoolnix-gui.exe" />
+    <Content Include="MKVToolNix\uninst.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
